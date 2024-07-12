@@ -1,13 +1,15 @@
 package com.weather_app;
 
 import com.weather_app.model.WeatherData;
+import com.weather_app.rest.WeatherRequest;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 
-import java.io.BufferedReader;
 import java.time.LocalDateTime;
-import java.time.LocalTime;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Controller {
     @FXML
@@ -26,9 +28,21 @@ public class Controller {
     @FXML private Label windSpeedLabel;
     @FXML private TextField citySearch;
     @FXML private Button buttonSearch;
-    public void onHelloButtonClick(ActionEvent actionEvent) {
+    List<WeatherData> weatherDataList;
+    WeatherRequest weatherRequest;
+    public void onbuttonSearchClick() {
+        if(!citySearch.getText().isEmpty()){
+            weatherDataList=weatherRequest.getWeatherData(citySearch.getText());
+            //
+        }
+
     }
     public void initialize(){
 
+
+    }
+    public void DataLoad()
+    {
+       //cityLabel.setLabelFor(weatherDataList.get(0).getCity());
     }
 }
