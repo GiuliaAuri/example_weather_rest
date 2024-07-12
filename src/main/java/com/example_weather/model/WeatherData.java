@@ -1,27 +1,32 @@
 package com.example_weather.model;
 
-import java.time.LocalDate;
-import java.util.Date;
+
+import java.time.LocalDateTime;
+
 
 public class WeatherData {
     String city;
     String description;
     int humidity;
     double windSpeed;
-    LocalDate date;
-    int temperature;
+    LocalDateTime datetime;
+    double temperatureMin;
+    double temperatureMax;
+    String main;
 
     public WeatherData() {
 
     }
 
-    public WeatherData(String city, String description, int humidity, double windSpeed, LocalDate date, int temperature) {
+    public WeatherData(String city, String description, int humidity, double windSpeed, LocalDateTime datetime, double temperatureMin, double temperatureMax, String main) {
         this.city = city;
         this.description = description;
         this.humidity = humidity;
         this.windSpeed = windSpeed;
-        this.date = date;
-        this.temperature = temperature;
+        this.datetime = datetime;
+        this.temperatureMin = temperatureMin;
+        this.temperatureMax = temperatureMax;
+        this.main = main;
     }
 
     public String getCity() {
@@ -56,20 +61,36 @@ public class WeatherData {
         this.windSpeed = windSpeed;
     }
 
-    public LocalDate getDate() {
-        return date;
+    public LocalDateTime getDatetime() {
+        return datetime;
     }
 
-    public void setDate(LocalDate date) {
-        this.date = date;
+    public void setDatetime(LocalDateTime datetime) {
+        this.datetime = datetime;
     }
 
-    public int getTemperature() {
-        return temperature;
+    public double getTemperatureMin() {
+        return temperatureMin;
     }
 
-    public void setTemperature(int temperature) {
-        this.temperature = temperature;
+    public void setTemperatureMin(double temperatureMin) {
+        this.temperatureMin = temperatureMin;
+    }
+
+    public double getTemperatureMax() {
+        return temperatureMax;
+    }
+
+    public void setTemperatureMax(double temperatureMax) {
+        this.temperatureMax = temperatureMax;
+    }
+
+    public String getMain() {
+        return main;
+    }
+
+    public void setMain(String main) {
+        this.main = main;
     }
 
     @Override
@@ -79,8 +100,10 @@ public class WeatherData {
                 ", description='" + description + '\'' +
                 ", humidity=" + humidity +
                 ", windSpeed=" + windSpeed +
-                ", date=" + date +
-                ", temperature=" + temperature +
+                ", datetime=" + datetime +
+                ", temperatureMin=" + temperatureMin +
+                ", temperatureMax=" + temperatureMax +
+                ", main='" + main + '\'' +
                 '}';
     }
 }
