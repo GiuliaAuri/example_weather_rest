@@ -5,10 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="51e4e65c-098f-4a27-87dd-bcf41a45d216" name="Changes" comment="Update">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example_weather/Controller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example_weather/WeatherApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example_weather/WeatherApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example_weather/model/WeatherData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example_weather/model/WeatherData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example_weather/rest/WeatherRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example_weather/rest/WeatherRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example_weather/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example_weather/weather-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,8 +20,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="FxmlFile" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -60,14 +62,27 @@
 }</component>
   <component name="RunManager">
     <configuration name="WeatherApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.example_weather.WeatherApp" />
-      <module name="example_weather" />
+      <option name="MAIN_CLASS_NAME" value="com.weather_app.WeatherApp" />
+      <module name="weather_app" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.example_weather.*" />
+          <option name="PATTERN" value="com.weather_app.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="weather_app" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="weather_app" />
+      <option name="filePath" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -95,6 +110,7 @@
       <updated>1720706125061</updated>
       <workItem from="1720706126132" duration="11366000" />
       <workItem from="1720777211488" duration="7195000" />
+      <workItem from="1720796201021" duration="2834000" />
     </task>
     <task id="LOCAL-00001" summary="Update">
       <option name="closed" value="true" />

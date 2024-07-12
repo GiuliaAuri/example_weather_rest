@@ -1,4 +1,4 @@
-package com.example_weather.rest;
+package com.weather_app.rest;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import okhttp3.OkHttpClient;

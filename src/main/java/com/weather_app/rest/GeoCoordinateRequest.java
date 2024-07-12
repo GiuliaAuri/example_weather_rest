@@ -1,6 +1,6 @@
-package com.example_weather.rest;
+package com.weather_app.rest;
 
-import com.example_weather.model.GeoCoordinate;
+import com.weather_app.model.GeoCoordinate;
 import com.fasterxml.jackson.databind.JsonNode;
 import io.github.cdimascio.dotenv.Dotenv;
 import okhttp3.*;

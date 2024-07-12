@@ -1,14 +1,13 @@
-package com.example_weather.rest;
+package com.weather_app.rest;
 
-import com.example_weather.model.GeoCoordinate;
-import com.example_weather.model.WeatherData;
+import com.weather_app.model.GeoCoordinate;
+import com.weather_app.model.WeatherData;
 import com.fasterxml.jackson.databind.JsonNode;
 import io.github.cdimascio.dotenv.Dotenv;
 import okhttp3.*;
 
 import java.io.IOException;
 import java.net.URL;
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;

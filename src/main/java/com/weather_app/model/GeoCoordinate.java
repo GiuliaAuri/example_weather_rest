@@ -1,4 +1,4 @@
-package com.example_weather.model;
+package com.weather_app.model;
 
 public class GeoCoordinate {
 

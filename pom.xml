@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com</groupId>
-    <artifactId>example_weather</artifactId>
+    <artifactId>weather_app</artifactId>
     <version>1.0-SNAPSHOT</version>
     <name>example_weather</name>
 
@@ -76,7 +76,7 @@
                         <!-- Default configuration for running with: mvn clean javafx:run -->
                         <id>default-cli</id>
                         <configuration>
-                            <mainClass>com.example_weather/com.example_weather.HelloApplication</mainClass>
+                            <mainClass>com.example_weather/com.weather_app.HelloApplication</mainClass>
                             <launcher>app</launcher>
                             <jlinkZipName>app</jlinkZipName>
                             <jlinkImageName>app</jlinkImageName>
