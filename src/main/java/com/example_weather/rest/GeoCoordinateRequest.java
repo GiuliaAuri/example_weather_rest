@@ -13,17 +13,17 @@ import java.net.URL;
 public class GeoCoordinateRequest extends RequestMaker{
     //indirizzo
     // https://api.openweathermap.org/geo/1.0/direct?q=London&limit=1&appid=75c0bdc915749108790c7c447dd77bc9
-    static String protocol = "https";
-    static String host = "api.openweathermap.org";
-    static String path = "geo/1.0/direct";
+    String protocol = "https";
+    String host = "api.openweathermap.org";
+    String path = "geo/1.0/direct";
 
-    static Dotenv dotenv = Dotenv.configure()
+    Dotenv dotenv = Dotenv.configure()
             .directory("./.env")
             .load();
-     static String APIKEY = dotenv.get("API_KEY");
+    String APIKEY = dotenv.get("API_KEY");
 
 
-    public static GeoCoordinate getGeoCoordinate(String city) {
+    public GeoCoordinate getGeoCoordinate(String city) {
 
         URL myurl = new HttpUrl.Builder()
                 .scheme(protocol)

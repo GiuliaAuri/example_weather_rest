@@ -7,6 +7,8 @@ import com.example_weather.rest.WeatherRequest;
 
 public class WeatherApp {
     public static void main(String[] args){
-        WeatherRequest.getWeatherData("Tokyo");
+        WeatherRequest weatherRequest=new WeatherRequest();
+        System.out.println( "DEBUG-"+
+        weatherRequest.getWeatherData("Tokyo").toString());
     }
 }

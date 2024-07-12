@@ -5,8 +5,8 @@ import okhttp3.OkHttpClient;
 
 public class RequestMaker {
 
-    static OkHttpClient client = new OkHttpClient();
-    static ObjectMapper mapper = new ObjectMapper();
+    OkHttpClient client = new OkHttpClient();
+    ObjectMapper mapper = new ObjectMapper();
 
     String protocol;
     String host;

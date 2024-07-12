@@ -1,5 +1,6 @@
 package com.example_weather.model;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 public class WeatherData {
@@ -7,10 +8,14 @@ public class WeatherData {
     String description;
     int humidity;
     double windSpeed;
-    Date date;
+    LocalDate date;
     int temperature;
 
-    public WeatherData(String city, String description, int humidity, double windSpeed, Date date, int temperature) {
+    public WeatherData() {
+
+    }
+
+    public WeatherData(String city, String description, int humidity, double windSpeed, LocalDate date, int temperature) {
         this.city = city;
         this.description = description;
         this.humidity = humidity;
@@ -51,11 +56,11 @@ public class WeatherData {
         this.windSpeed = windSpeed;
     }
 
-    public Date getDate() {
+    public LocalDate getDate() {
         return date;
     }
 
-    public void setDate(Date date) {
+    public void setDate(LocalDate date) {
         this.date = date;
     }
 
