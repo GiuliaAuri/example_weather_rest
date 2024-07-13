@@ -24,7 +24,7 @@
                         <Insets top="5.0" />
                      </HBox.margin>
                   </TextField>
-                  <Button fx:id="buttonSearch" mnemonicParsing="false" onAction="#onbuttonSearchClick" prefHeight="14.0" prefWidth="23.0">
+                  <Button fx:id="buttonSearch" mnemonicParsing="false" onAction="#onButtonSearchClick" prefHeight="14.0" prefWidth="23.0">
                      <HBox.margin>
                         <Insets left="5.0" top="5.0" />
                      </HBox.margin>
@@ -47,7 +47,7 @@
                      <children>
                         <HBox alignment="TOP_CENTER" prefHeight="178.0" prefWidth="526.0">
                            <children>
-                              <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                              <ImageView fx:id="iconWeather" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@../../img/clear.png" />
                                  </image>

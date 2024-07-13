@@ -10,8 +10,11 @@ import javafx.scene.control.*;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.StreamSupport;
@@ -33,14 +36,15 @@ public class Controller {
     @FXML private Label windSpeedLabel;
     @FXML private TextField citySearch;
     @FXML private Button buttonSearch;
+    @FXML private ImageView iconWeather;
     private List<WeatherData> weatherDataList;
     private ObservableList<WeatherData> weatherDataObservableList = FXCollections.observableArrayList();
     private WeatherRequest weatherRequest = new WeatherRequest();
 
-    public void onbuttonSearchClick() {
+    public void onButtonSearchClick() {
         if (!citySearch.getText().isEmpty()) {
             weatherDataList = weatherRequest.getWeatherData(citySearch.getText());
-            DataLoad();
+            loadData();
         }
     }
 
@@ -48,13 +52,26 @@ public class Controller {
     public void initialize() {
         weatherColumn.setCellValueFactory(new PropertyValueFactory<>("main"));
         timeColumn.setCellValueFactory(new PropertyValueFactory<>("datetime"));
+        timeColumn.setCellFactory(column -> new TableCell<WeatherData, LocalDateTime>() {
+            private final DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd MMM, HH:mm");
+
+            @Override
+            protected void updateItem(LocalDateTime item, boolean empty) {
+                super.updateItem(item, empty);
+                if (empty || item == null) {
+                    setText(null);
+                } else {
+                    setText(item.format(formatter));
+                }
+            }
+        });
         temperatureMinColumn.setCellValueFactory(new PropertyValueFactory<>("temperatureMin"));
         temperatureMaxColumn.setCellValueFactory(new PropertyValueFactory<>("temperatureMax"));
         weatherDataList = weatherRequest.getWeatherData("Modena");
-        DataLoad();
+        loadData();
     }
 
-    private void DataLoad() {
+    private void loadData() {
         if (weatherDataList != null && !weatherDataList.isEmpty()) {
             WeatherData currentWeather = weatherDataList.get(0);
             cityLabel.setText(currentWeather.getCity().toUpperCase());
@@ -63,13 +80,13 @@ public class Controller {
             humidityLabel.setText(String.format("%d%%", currentWeather.getHumidity()));
             windSpeedLabel.setText(String.format("%.2f km/h", currentWeather.getWindSpeed()));
 
-
-            TableDataLoad();
+            loadWeatherIcon(currentWeather.getMain());
+            loadTableData();
             citySearch.clear();
         }
 
     }
-    private void TableDataLoad(){
+    private void loadTableData(){
 
         TableWeather.setItems(getWeatherDataTable());
         TableWeather.getColumns().setAll(weatherColumn,timeColumn,temperatureMinColumn,temperatureMaxColumn);
@@ -83,6 +100,39 @@ public class Controller {
 
         }
         return weatherDataObservableList;
+    }
+    private void loadWeatherIcon(String LoadWeatherIcon)
+    {
+        String iconPath = "";
+
+        switch (LoadWeatherIcon.toLowerCase()) {
+            case "clear":
+                iconPath = "/img/clear.png";
+                break;
+            case "clouds":
+                iconPath = "/img/clouds.png";
+                break;
+            case "drizzle":
+                iconPath="/img/drizzle.png";
+                break;
+            case "mist":
+                iconPath="/img/mist.webp";
+                break;
+            case "rain":
+                iconPath="/img/rain.png";
+                break;
+            case "snow":
+                iconPath="/img/snow.png";
+                break;
+            case "thunderstorm":
+                iconPath="/img/thunderstorm.webp";
+                break;
+            default:
+                System.out.println("Error no icon has been found");
+                break;
+        }
+
+        iconWeather.setImage(new Image(getClass().getResourceAsStream(iconPath)));
     }
 
 
