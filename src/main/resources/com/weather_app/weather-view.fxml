@@ -52,27 +52,25 @@
                                     <Image url="@../../img/clear.png" />
                                  </image>
                               </ImageView>
-                              <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0">
+                              <VBox alignment="CENTER_LEFT" prefHeight="178.0" prefWidth="178.0">
                                  <children>
-                                    <Label fx:id="cityLabel" text="City">
+                                    <Label fx:id="cityLabel" prefHeight="35.0" prefWidth="181.0" text="City">
                                        <font>
                                           <Font name="System Bold" size="24.0" />
                                        </font>
                                     </Label>
-                                    <Label fx:id="latitudeLabel" text="latitude" />
-                                    <Label fx:id="longitudeLabel" text="longitude" />
+                                    <Label fx:id="temperatureLabel" contentDisplay="CENTER" prefHeight="69.0" prefWidth="100.0" text="temperature" textAlignment="CENTER">
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
                                  </children>
                               </VBox>
                            </children>
                         </HBox>
-                        <Label fx:id="temperatureLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="30.0" prefWidth="515.0" text="temperature" textAlignment="CENTER">
-                           <VBox.margin>
-                              <Insets left="10.0" />
-                           </VBox.margin>
-                           <font>
-                              <Font size="14.0" />
-                           </font>
-                        </Label>
                         <Label fx:id="descriptionLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="40.0" prefWidth="515.0" text="Description" textAlignment="CENTER">
                            <font>
                               <Font size="18.0" />
@@ -88,14 +86,14 @@
                                     <Image url="@../../img/humidity.png" />
                                  </image>
                               </ImageView>
-                              <VBox alignment="CENTER_LEFT" prefHeight="74.0" prefWidth="170.0">
+                              <VBox alignment="CENTER_RIGHT" prefHeight="74.0" prefWidth="190.0">
                                  <children>
                                     <Label fx:id="humidityLabel" text="53%">
                                        <font>
                                           <Font name="System Bold" size="36.0" />
                                        </font>
                                     </Label>
-                                    <Label prefHeight="18.0" prefWidth="106.0" text="Humidity">
+                                    <Label alignment="CENTER_RIGHT" prefHeight="18.0" prefWidth="106.0" text="Humidity">
                                        <font>
                                           <Font size="14.0" />
                                        </font>
@@ -110,9 +108,9 @@
                                     <Image url="@../../img/wind.png" />
                                  </image>
                               </ImageView>
-                              <VBox alignment="CENTER_LEFT" prefHeight="74.0" prefWidth="170.0">
+                              <VBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="333.0">
                                  <children>
-                                    <Label fx:id="windSpeedLabel" prefHeight="54.0" prefWidth="154.0" text="5.6 km/h">
+                                    <Label fx:id="windSpeedLabel" prefHeight="54.0" prefWidth="176.0" text="5.66 km/h">
                                        <font>
                                           <Font name="System Bold" size="36.0" />
                                        </font>
@@ -131,11 +129,11 @@
                         </HBox>
                      </children>
                   </VBox>
-                  <TableView fx:id="TableWeather" prefHeight="200.0" prefWidth="525.0">
+                  <TableView fx:id="TableWeather" prefHeight="200.0" prefWidth="520.0" stylesheets="@../../style.css">
                     <columns>
-                      <TableColumn fx:id="weatherColumn" prefWidth="131.0" text="Weather" />
-                      <TableColumn fx:id="timeColumn" prefWidth="131.0" text="Time" />
-                        <TableColumn fx:id="temperatureMinColumn" prefWidth="131.0" text="TemperatureMin" />
+                      <TableColumn fx:id="weatherColumn" prefWidth="130.0" text="Weather" />
+                      <TableColumn fx:id="timeColumn" prefWidth="130.0" text="Time" />
+                        <TableColumn fx:id="temperatureMinColumn" prefWidth="130.0" text="TemperatureMin" />
                         <TableColumn fx:id="temperatureMaxColumn" prefWidth="140.80007934570312" text="TemperatureMax" />
                     </columns>
                   </TableView>

@@ -1,0 +1,15 @@
+.table-view {
+    -fx-border-color: transparent; /* Rimuovi il bordo */
+}
+
+.table-view .table-row-cell {
+    -fx-background-color: transparent; /* Sfondo trasparente per le righe */
+}
+
+.table-view .table-row-cell:filled {
+    -fx-background-color: white; /* Colore di sfondo per le righe piene */
+}
+
+.table-view .table-row-cell:empty {
+    -fx-background-color: transparent; /* Sfondo trasparente per le righe vuote */
+}

@@ -9,5 +9,7 @@ module com.example_weather {
         requires annotations;
 
         opens com.weather_app to javafx.fxml;
+
+        opens com.weather_app.model to javafx.base;
         exports com.weather_app;
 }
