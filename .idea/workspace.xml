@@ -6,8 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="51e4e65c-098f-4a27-87dd-bcf41a45d216" name="Changes" comment="Update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/weather_app/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/weather_app/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/weather_app/model/WeatherData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/weather_app/model/WeatherData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/weather_app/rest/GeoCoordinateRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/weather_app/rest/GeoCoordinateRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/weather_app/weather-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/weather_app/weather-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/style.css" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,7 +105,7 @@
       <workItem from="1720777211488" duration="7195000" />
       <workItem from="1720796201021" duration="2834000" />
       <workItem from="1720799253837" duration="11606000" />
-      <workItem from="1720862556704" duration="12475000" />
+      <workItem from="1720862556704" duration="17583000" />
     </task>
     <task id="LOCAL-00001" summary="Update">
       <option name="closed" value="true" />
@@ -160,7 +163,15 @@
       <option name="project" value="LOCAL" />
       <updated>1720879299669</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Update">
+      <option name="closed" value="true" />
+      <created>1720881092090</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1720881092090</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

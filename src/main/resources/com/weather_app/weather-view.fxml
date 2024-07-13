@@ -13,8 +13,13 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="565.0" prefWidth="1050.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.weather_app.Controller">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="565.0" prefWidth="1050.0" style="-fx-background-color: #000000; -fx-background-image: \\example_weather\src\main\resources\img\sky.jpg;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.weather_app.Controller">
    <children>
+      <ImageView fitHeight="629.0" fitWidth="1007.0" focusTraversable="true" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../img/clouds-2329680_1280.jpg" />
+         </image>
+      </ImageView>
       <VBox alignment="TOP_CENTER" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #ffffff;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
             <HBox alignment="TOP_CENTER" prefHeight="35.0">
@@ -71,7 +76,7 @@
                               </VBox>
                            </children>
                         </HBox>
-                        <Label fx:id="descriptionLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="40.0" prefWidth="515.0" text="Description" textAlignment="CENTER">
+                        <Label fx:id="descriptionLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="70.0" prefWidth="515.0" text="Description" textAlignment="CENTER">
                            <font>
                               <Font size="18.0" />
                            </font>
@@ -81,13 +86,16 @@
                         </Label>
                         <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
                            <children>
-                              <ImageView fitHeight="59.0" fitWidth="73.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@../../img/humidity.png" />
-                                 </image>
-                              </ImageView>
                               <VBox alignment="CENTER_RIGHT" prefHeight="74.0" prefWidth="190.0">
                                  <children>
+                                    <ImageView fitHeight="59.0" fitWidth="73.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../img/humidity.png" />
+                                       </image>
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                    </ImageView>
                                     <Label fx:id="humidityLabel" text="53%">
                                        <font>
                                           <Font name="System Bold" size="36.0" />
@@ -100,16 +108,19 @@
                                     </Label>
                                  </children>
                                  <HBox.margin>
-                                    <Insets left="10.0" />
+                                    <Insets left="10.0" right="10.0" />
                                  </HBox.margin>
+                                 <padding>
+                                    <Insets right="10.0" />
+                                 </padding>
                               </VBox>
-                              <ImageView fitHeight="59.0" fitWidth="73.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@../../img/wind.png" />
-                                 </image>
-                              </ImageView>
                               <VBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="333.0">
                                  <children>
+                                    <ImageView fitHeight="59.0" fitWidth="73.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../img/wind.png" />
+                                       </image>
+                                    </ImageView>
                                     <Label fx:id="windSpeedLabel" prefHeight="54.0" prefWidth="176.0" text="5.66 km/h">
                                        <font>
                                           <Font name="System Bold" size="36.0" />
@@ -124,12 +135,18 @@
                                  <padding>
                                     <Insets left="10.0" />
                                  </padding>
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
                               </VBox>
                            </children>
                         </HBox>
                      </children>
                   </VBox>
-                  <TableView fx:id="TableWeather" prefHeight="200.0" prefWidth="520.0" stylesheets="@../../style.css">
+                  <TableView fx:id="TableWeather" prefHeight="200.0" prefWidth="520.0">
                     <columns>
                       <TableColumn fx:id="weatherColumn" prefWidth="130.0" text="Weather" />
                       <TableColumn fx:id="timeColumn" prefWidth="130.0" text="Time" />
