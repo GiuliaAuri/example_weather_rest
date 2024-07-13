@@ -14,6 +14,7 @@ public class WeatherData {
     double temperatureMax;
     String main;
 
+
     public WeatherData() {
 
     }

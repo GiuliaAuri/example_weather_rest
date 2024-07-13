@@ -50,7 +50,23 @@ public class Controller {
 
     @FXML
     public void initialize() {
-        weatherColumn.setCellValueFactory(new PropertyValueFactory<>("main"));
+        weatherColumn.setCellValueFactory(new PropertyValueFactory<>("main")); // Rimanere con il campo main
+        weatherColumn.setCellFactory(column -> new TableCell<WeatherData, String>() {
+            private final ImageView imageView = new ImageView();
+
+            @Override
+            protected void updateItem(String item, boolean empty) {
+                super.updateItem(item, empty);
+                if (empty || item == null) {
+                    setGraphic(null);
+                } else {
+                    imageView.setImage(loadWeatherIconTable(item)); // Carica l'icona basata sul valore
+                    imageView.setFitHeight(30);
+                    imageView.setFitWidth(30);
+                    setGraphic(imageView);
+                }
+            }
+        });
         timeColumn.setCellValueFactory(new PropertyValueFactory<>("datetime"));
         timeColumn.setCellFactory(column -> new TableCell<WeatherData, LocalDateTime>() {
             private final DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd MMM, HH:mm");
@@ -96,12 +112,17 @@ public class Controller {
         weatherDataObservableList.clear();
         for (int i = 1; i <  Math.min(weatherDataList.size(), 7); i++) {
             WeatherData currentWeather = weatherDataList.get(i);
+            loadWeatherIcon(currentWeather.getMain());
             weatherDataObservableList.add(weatherDataList.get(i));
 
         }
         return weatherDataObservableList;
     }
     private void loadWeatherIcon(String LoadWeatherIcon)
+    {
+        iconWeather.setImage(new Image(getClass().getResourceAsStream(getPathIcon(LoadWeatherIcon))));
+    }
+    private String getPathIcon(String LoadWeatherIcon)
     {
         String iconPath = "";
 
@@ -131,8 +152,11 @@ public class Controller {
                 System.out.println("Error no icon has been found");
                 break;
         }
-
-        iconWeather.setImage(new Image(getClass().getResourceAsStream(iconPath)));
+        return iconPath;
+    }
+    private Image loadWeatherIconTable(String LoadWeatherIcon)
+    {
+        return new Image(getClass().getResourceAsStream(getPathIcon(LoadWeatherIcon)));
     }
 
 
