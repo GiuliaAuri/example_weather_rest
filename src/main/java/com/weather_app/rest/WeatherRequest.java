@@ -29,7 +29,10 @@ public class WeatherRequest extends  RequestMaker{
     public List<WeatherData> getWeatherData(String city){
         GeoCoordinateRequest geoCoordinateRequest= new GeoCoordinateRequest();
         GeoCoordinate geoCoordinate=geoCoordinateRequest.getGeoCoordinate(city);
-        //controllo che le coordinate siano valide
+        if(geoCoordinate.getLatitude()==0.0 || geoCoordinate.getLongitude()==0.0){
+            throw new RuntimeException("Error geoCoordinate is not valid");
+        }
+
 
         System.out.println("DEBUG-"+geocoordinate);
 
@@ -68,7 +71,7 @@ public class WeatherRequest extends  RequestMaker{
                 if(i>7)
                     break;
                 WeatherData tmp = new WeatherData();
-                tmp.setCity(city);
+                tmp.setCity(geoCoordinate.getCity().toString());
                 tmp.setDescription(weatherNode.get("weather").get(0).get("description").asText());
                 tmp.setTemperatureMin(weatherNode.get("main").get("temp_min").asDouble());
                 tmp.setTemperatureMax(weatherNode.get("main").get("temp_max").asDouble());

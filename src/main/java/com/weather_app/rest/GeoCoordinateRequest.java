@@ -58,20 +58,20 @@ public class GeoCoordinateRequest extends RequestMaker{
                 JsonNode firstItem = bodyNode.get(0);
                 JsonNode latNode = firstItem.get("lat");
                 JsonNode lonNode = firstItem.get("lon");
-                String controll= String.valueOf(firstItem.get("name"));
-                if (latNode != null && lonNode != null && controll.toLowerCase()==city.toLowerCase()) {
-
+                if (latNode != null && lonNode != null) {
                     coordinates.setLatitude(latNode.asDouble());
                     coordinates.setLongitude(lonNode.asDouble());
+                    coordinates.setCity(firstItem.get("name").asText());
 
                 } else {
-
                     coordinates.setLatitude(0.0);
                     coordinates.setLongitude(0.0);
+                    coordinates.setCity("");
                 }
             } else {
                 coordinates.setLatitude(0.0);
                 coordinates.setLongitude(0.0);
+                coordinates.setCity("");
             }
 
             return coordinates;
