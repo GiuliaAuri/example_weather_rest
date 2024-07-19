@@ -13,6 +13,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
+import java.io.IOException;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
@@ -42,9 +43,14 @@ public class Controller {
     private WeatherRequest weatherRequest = new WeatherRequest();
 
     public void onButtonSearchClick() {
-        if (!citySearch.getText().isEmpty()) {
-            weatherDataList = weatherRequest.getWeatherData(citySearch.getText());
-            loadData();
+        try {
+            if (!citySearch.getText().isEmpty()) {
+                weatherDataList = weatherRequest.getWeatherData(citySearch.getText());
+                loadData();
+            }
+        }
+        catch (RuntimeException e){
+            showError("Errore di ricerca", e.getMessage());
         }
     }
 
@@ -105,6 +111,9 @@ public class Controller {
             loadWeatherIcon(currentWeather.getMain());
             loadTableData();
             citySearch.clear();
+        }
+        else{
+            showError("Nessun dato trovato", "Non sono stati trovati dati per la città inserita.");
         }
 
     }
@@ -194,5 +203,12 @@ public class Controller {
         return new Image(getClass().getResourceAsStream(getPathIcon(LoadWeatherIcon)));
     }
 
-
+    private void showError(String title, String message)
+    {
+        Alert alert=new Alert(Alert.AlertType.ERROR);
+        alert.setTitle(title);
+        alert.setHeaderText(null);
+        alert.setContentText(message);
+        alert.showAndWait();
+    }
 }

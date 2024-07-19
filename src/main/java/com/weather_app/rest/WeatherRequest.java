@@ -33,7 +33,6 @@ public class WeatherRequest extends  RequestMaker{
             throw new RuntimeException("Error geoCoordinate is not valid");
         }
 
-
         System.out.println("DEBUG-"+geocoordinate);
 
         HttpUrl.Builder urlBuilder = new HttpUrl.Builder();
@@ -51,7 +50,6 @@ public class WeatherRequest extends  RequestMaker{
                 .url(myurl)
                 .build();
 
-
         Call call = client.newCall(request);
         try (Response response = call.execute()) {
 
@@ -61,7 +59,9 @@ public class WeatherRequest extends  RequestMaker{
             System.out.println("DEBUG"+response.toString());
             ResponseBody responseBody = response.body();
             JsonNode bodyNode = mapper.readTree(responseBody.string());
-
+            /*if (bodyNode.has("message")) {
+                throw new RuntimeException("Errore API: " + bodyNode.get("message").asText());
+            }*/
             System.out.println("DEBUG"+bodyNode.toString());
 
 
@@ -87,7 +87,7 @@ public class WeatherRequest extends  RequestMaker{
 
             return weatherDataList;
         } catch (IOException e) {
-            throw new RuntimeException(e.getMessage());
+            throw new RuntimeException("Errore nella comunicazione con l'API: " + e.getMessage());
         }
     }
     public LocalDateTime StringToLocalDateTime(String dateTimeString){
