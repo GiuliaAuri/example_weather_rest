@@ -85,6 +85,7 @@ public class Controller {
         temperatureMaxColumn.setCellValueFactory(new PropertyValueFactory<>("temperatureMax"));
         weatherDataList = weatherRequest.getWeatherData("Modena");
         loadData();
+
     }
 
     /**

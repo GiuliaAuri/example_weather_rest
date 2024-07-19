@@ -24,7 +24,7 @@
          <children>
             <HBox alignment="TOP_CENTER" prefHeight="35.0">
                <children>
-                  <TextField fx:id="citySearch" prefHeight="25.0" prefWidth="160.0" promptText="Enter your city">
+                  <TextField fx:id="citySearch" onAction="#onButtonSearchClick" prefHeight="25.0" prefWidth="160.0" promptText="Enter your city">
                      <HBox.margin>
                         <Insets top="5.0" />
                      </HBox.margin>
