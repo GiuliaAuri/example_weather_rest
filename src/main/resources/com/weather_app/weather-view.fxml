@@ -17,7 +17,7 @@
    <children>
       <VBox alignment="TOP_CENTER" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <HBox alignment="TOP_CENTER" prefHeight="93.0" prefWidth="1050.0">
+            <HBox alignment="TOP_CENTER" prefHeight="93.0" prefWidth="1050.0" style="-fx-background-color: #ffffff;">
                <children>
                   <TextField fx:id="citySearch" onAction="#onButtonSearchClick" prefHeight="25.0" prefWidth="160.0" promptText="Enter your city">
                      <HBox.margin>

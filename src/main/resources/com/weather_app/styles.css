@@ -5,6 +5,10 @@
     -fx-background-size: cover;
     -fx-background-repeat: no-repeat;
 }
+/*.HBox{
+    -fx-background-color: rgba(255, 255, 255, 0.2);
+    -fx-effect: dropshadow(gaussian, rgba(255, 255, 255, 0.2), 10, 0.2, 0, 0);
+}*/
 /* table forecast */
 .table-view {
     -fx-background-color: rgba(255, 255, 255, 0.2); /* Sfondo bianco semitrasparente */
@@ -15,18 +19,34 @@
 
 .table-view .column-header-background {
     -fx-background-color: rgba(255, 255, 255, 0.2);
+    -fx-padding: 0;
 }
 
 .table-view .table-cell {
     -fx-background-color: rgba(255, 255, 255, 0.2);
+
 }
 
 .table-view .column-header {
     -fx-background-color: rgba(255, 255, 255, 0.2);
+    -fx-padding: 5;
+    -fx-border-width: 0;
 }
 
 .table-view .table-row-cell {
     -fx-background-color: rgba(255, 255, 255, 0.2);
+}
+.table-view .table-column > .label {
+    -fx-padding: 0;
+    -fx-border-width: 0;
+    -fx-font-size: 0;
+}
+/* Nascondi la barra di scorrimento orizzontale */
+.table-view .scroll-bar:horizontal {
+    -fx-opacity: 0;
+    -fx-max-height: 0;
+    -fx-pref-height: 0;
+    -fx-min-height: 0;
 }
 
 /* Nasconde le righe vuote */
