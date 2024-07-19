@@ -13,25 +13,20 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="565.0" prefWidth="1050.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.weather_app.Controller">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="565.0" prefWidth="1050.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.weather_app.Controller">
    <children>
-      <ImageView fitHeight="629.0" fitWidth="1007.0" focusTraversable="true" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../img/clouds-2329680_1280.jpg" />
-         </image>
-      </ImageView>
-      <VBox alignment="TOP_CENTER" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #ffffff;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <VBox alignment="TOP_CENTER" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <HBox alignment="TOP_CENTER" prefHeight="35.0">
+            <HBox alignment="TOP_CENTER" prefHeight="93.0" prefWidth="1050.0">
                <children>
                   <TextField fx:id="citySearch" onAction="#onButtonSearchClick" prefHeight="25.0" prefWidth="160.0" promptText="Enter your city">
                      <HBox.margin>
-                        <Insets top="5.0" />
+                        <Insets top="15.0" />
                      </HBox.margin>
                   </TextField>
                   <Button fx:id="buttonSearch" mnemonicParsing="false" onAction="#onButtonSearchClick" prefHeight="14.0" prefWidth="23.0">
                      <HBox.margin>
-                        <Insets left="5.0" top="5.0" />
+                        <Insets left="5.0" top="15.0" />
                      </HBox.margin>
                      <graphic>
                         <ImageView fitHeight="17.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
@@ -52,19 +47,19 @@
                      <children>
                         <HBox alignment="TOP_CENTER" prefHeight="178.0" prefWidth="526.0">
                            <children>
-                              <ImageView fx:id="iconWeather" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                              <ImageView fx:id="iconWeather" fitHeight="181.0" fitWidth="213.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@../../img/clear.png" />
                                  </image>
                               </ImageView>
                               <VBox alignment="CENTER_LEFT" prefHeight="178.0" prefWidth="237.0">
                                  <children>
-                                    <Label fx:id="cityLabel" prefHeight="35.0" prefWidth="241.0" text="City">
+                                    <Label fx:id="cityLabel" prefHeight="78.0" prefWidth="238.0" text="City" textFill="WHITE">
                                        <font>
                                           <Font name="System Bold" size="24.0" />
                                        </font>
                                     </Label>
-                                    <Label fx:id="temperatureLabel" contentDisplay="CENTER" prefHeight="69.0" prefWidth="100.0" text="temperature" textAlignment="CENTER">
+                                    <Label fx:id="temperatureLabel" contentDisplay="CENTER" prefHeight="69.0" prefWidth="100.0" text="temperature" textAlignment="CENTER" textFill="WHITE">
                                        <VBox.margin>
                                           <Insets />
                                        </VBox.margin>
@@ -76,7 +71,7 @@
                               </VBox>
                            </children>
                         </HBox>
-                        <Label fx:id="descriptionLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="70.0" prefWidth="515.0" text="Description" textAlignment="CENTER">
+                        <Label fx:id="descriptionLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="70.0" prefWidth="515.0" text="Description" textAlignment="CENTER" textFill="WHITE">
                            <font>
                               <Font size="18.0" />
                            </font>
@@ -86,7 +81,7 @@
                         </Label>
                         <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
                            <children>
-                              <VBox alignment="CENTER_RIGHT" prefHeight="74.0" prefWidth="190.0">
+                              <VBox alignment="CENTER_RIGHT" prefHeight="74.0" prefWidth="262.0">
                                  <children>
                                     <ImageView fitHeight="59.0" fitWidth="73.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
@@ -96,12 +91,12 @@
                                           <Insets />
                                        </VBox.margin>
                                     </ImageView>
-                                    <Label fx:id="humidityLabel" text="53%">
+                                    <Label fx:id="humidityLabel" text="53%" textFill="#fafafa">
                                        <font>
                                           <Font name="System Bold" size="36.0" />
                                        </font>
                                     </Label>
-                                    <Label alignment="CENTER_RIGHT" prefHeight="18.0" prefWidth="106.0" text="Humidity">
+                                    <Label alignment="CENTER_RIGHT" prefHeight="18.0" prefWidth="106.0" text="Humidity" textFill="WHITE">
                                        <font>
                                           <Font size="14.0" />
                                        </font>
@@ -114,19 +109,19 @@
                                     <Insets right="10.0" />
                                  </padding>
                               </VBox>
-                              <VBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="333.0">
+                              <VBox alignment="CENTER_LEFT" prefHeight="126.0" prefWidth="263.0">
                                  <children>
                                     <ImageView fitHeight="59.0" fitWidth="73.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
                                           <Image url="@../../img/wind.png" />
                                        </image>
                                     </ImageView>
-                                    <Label fx:id="windSpeedLabel" prefHeight="54.0" prefWidth="176.0" text="5.66 km/h">
+                                    <Label fx:id="windSpeedLabel" prefHeight="54.0" prefWidth="176.0" text="5.66 km/h" textFill="WHITE">
                                        <font>
                                           <Font name="System Bold" size="36.0" />
                                        </font>
                                     </Label>
-                                    <Label text="Wind Speed">
+                                    <Label text="Wind Speed" textFill="WHITE">
                                        <font>
                                           <Font size="14.0" />
                                        </font>
@@ -146,7 +141,7 @@
                         </HBox>
                      </children>
                   </VBox>
-                  <TableView fx:id="TableWeather" prefHeight="200.0" prefWidth="520.0">
+                  <TableView fx:id="TableWeather" prefHeight="200.0" prefWidth="520.0" stylesheets="@styles.css">
                      <columns>
                         <TableColumn fx:id="weatherColumn" prefWidth="130.0" text="Weather" />
                         <TableColumn fx:id="timeColumn" prefWidth="130.0" text="Time" />

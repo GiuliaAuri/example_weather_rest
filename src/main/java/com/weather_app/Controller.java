@@ -61,8 +61,8 @@ public class Controller {
                     setGraphic(null);
                 } else {
                     imageView.setImage(loadWeatherIconTable(item)); // Carica l'icona basata sul valore
-                    imageView.setFitHeight(30);
-                    imageView.setFitWidth(30);
+                    imageView.setFitHeight(40);
+                    imageView.setFitWidth(40);
                     setGraphic(imageView);
                 }
             }
@@ -85,6 +85,8 @@ public class Controller {
         temperatureMaxColumn.setCellValueFactory(new PropertyValueFactory<>("temperatureMax"));
         weatherDataList = weatherRequest.getWeatherData("Modena");
         loadData();
+        TableWeather.setSelectionModel(null);
+
 
     }
 

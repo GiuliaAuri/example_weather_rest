@@ -13,6 +13,7 @@ public class WeatherApp extends Application{
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(WeatherApp.class.getResource("/com/weather_app/weather-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 1050, 625);
+        //scene.getStylesheets().add(getClass().getResource("styles.css").toExternalForm());
         stage.setTitle("Weather Application");
         stage.setScene(scene);
         stage.show();

@@ -1,22 +1,36 @@
 
-.anchor-pane {
-    -fx-background-color: #6A1B9A;
+/* styles.css */
+.root {
+    -fx-background-image: url("../../img/clouds-2329680_1280.jpg");
+    -fx-background-size: cover;
+    -fx-background-repeat: no-repeat;
+}
+/* table forecast */
+.table-view {
+    -fx-background-color: rgba(255, 255, 255, 0.2); /* Sfondo bianco semitrasparente */
+    -fx-background-insets: 0;
+    -fx-background-radius: 5;
+    -fx-effect: dropshadow(gaussian, rgba(255, 255, 255, 0.2), 10, 0.2, 0, 0);
 }
 
-.text-field {
-    -fx-background-radius: 15;
-    -fx-border-radius: 15;
-    -fx-border-color: #ffffff;
-    -fx-text-fill: #ffffff;
+.table-view .column-header-background {
+    -fx-background-color: rgba(255, 255, 255, 0.2);
 }
 
-.button {
-    -fx-background-color: #BA68C8;
-    -fx-text-fill: #ffffff;
-    -fx-background-radius: 15;
+.table-view .table-cell {
+    -fx-background-color: rgba(255, 255, 255, 0.2);
 }
 
-.label {
-    -fx-text-fill: #ffffff;
+.table-view .column-header {
+    -fx-background-color: rgba(255, 255, 255, 0.2);
+}
+
+.table-view .table-row-cell {
+    -fx-background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Nasconde le righe vuote */
+.table-row-cell:empty {
+    -fx-background-color: transparent;
 }
 
