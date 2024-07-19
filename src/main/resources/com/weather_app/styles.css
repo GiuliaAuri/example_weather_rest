@@ -1,0 +1,22 @@
+
+.anchor-pane {
+    -fx-background-color: #6A1B9A;
+}
+
+.text-field {
+    -fx-background-radius: 15;
+    -fx-border-radius: 15;
+    -fx-border-color: #ffffff;
+    -fx-text-fill: #ffffff;
+}
+
+.button {
+    -fx-background-color: #BA68C8;
+    -fx-text-fill: #ffffff;
+    -fx-background-radius: 15;
+}
+
+.label {
+    -fx-text-fill: #ffffff;
+}
+
