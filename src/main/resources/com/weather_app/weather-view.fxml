@@ -160,7 +160,7 @@
                         </HBox>
                      </children>
                   </VBox>
-                  <TableView fx:id="TableWeather" prefHeight="200.0" prefWidth="520.0" VBox.vgrow="ALWAYS">
+                  <TableView fx:id="TableWeather" prefHeight="480.0" prefWidth="520.0" VBox.vgrow="ALWAYS">
                      <columns>
                         <TableColumn fx:id="weatherColumn" prefWidth="130.0" text="Weather" />
                         <TableColumn fx:id="timeColumn" prefWidth="130.0" text="Time" />
