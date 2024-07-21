@@ -68,7 +68,7 @@ public class WeatherRequest extends  RequestMaker{
             List<WeatherData> weatherDataList=new ArrayList<>();
             int i=0;
             for (JsonNode weatherNode: bodyNode.get("list")) {
-                if(i>7)
+                if(i>12)
                     break;
                 WeatherData tmp = new WeatherData();
                 tmp.setCity(geoCoordinate.getCity().toString());

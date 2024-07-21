@@ -137,7 +137,7 @@ public class Controller {
      */
     ObservableList<WeatherData> getWeatherDataTable(){
         weatherDataObservableList.clear();
-        for (int i = 0; i <  Math.min(weatherDataList.size(), 8); i++) {
+        for (int i = 1; i <  Math.min(weatherDataList.size(), 12); i++) {
             WeatherData currentWeather = weatherDataList.get(i);
             loadWeatherIcon(currentWeather.getMain());
             weatherDataObservableList.add(weatherDataList.get(i));
