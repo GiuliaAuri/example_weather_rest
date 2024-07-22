@@ -20,6 +20,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.StreamSupport;
 
+import static java.lang.Thread.sleep;
+
 
 public class Controller {
     @FXML
@@ -89,10 +91,10 @@ public class Controller {
         });
         temperatureMinColumn.setCellValueFactory(new PropertyValueFactory<>("temperatureMin"));
         temperatureMaxColumn.setCellValueFactory(new PropertyValueFactory<>("temperatureMax"));
+
         weatherDataList = weatherRequest.getWeatherData("Modena");
         loadData();
         TableWeather.setSelectionModel(null);
-
 
     }
 
@@ -108,7 +110,7 @@ public class Controller {
             humidityLabel.setText(String.format("%d%%", currentWeather.getHumidity()));
             windSpeedLabel.setText(String.format("%.2f km/h", currentWeather.getWindSpeed()));
 
-            loadWeatherIcon(currentWeather.getMain());
+            iconWeather.setImage(new Image(getClass().getResourceAsStream(getPathIcon(currentWeather.getMain()))));
             loadTableData();
             citySearch.clear();
         }
@@ -137,23 +139,15 @@ public class Controller {
      */
     ObservableList<WeatherData> getWeatherDataTable(){
         weatherDataObservableList.clear();
-        for (int i = 1; i <  Math.min(weatherDataList.size(), 12); i++) {
+        for (int i = 0; i <  Math.min(weatherDataList.size(), 12); i++) {
             WeatherData currentWeather = weatherDataList.get(i);
-            loadWeatherIcon(currentWeather.getMain());
+
             weatherDataObservableList.add(weatherDataList.get(i));
 
         }
         return weatherDataObservableList;
     }
 
-    /**
-     * A method that loads the icon of the weather
-     * @param LoadWeatherIcon the weather that corresponds to the icon to be displayed
-     */
-    private void loadWeatherIcon(String LoadWeatherIcon)
-    {
-        iconWeather.setImage(new Image(getClass().getResourceAsStream(getPathIcon(LoadWeatherIcon))));
-    }
 
     /**
      * A method that calculates the correspondence between weather and icon
@@ -188,6 +182,7 @@ public class Controller {
                 break;
             default:
                 System.out.println("Error no icon has been found");
+                iconPath="/img/default.png";
                 break;
         }
         return iconPath;

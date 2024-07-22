@@ -19,6 +19,7 @@ public class WeatherApp extends Application{
         stage.getIcons().add(new Image(getClass().getResourceAsStream("icon.png")));
         stage.setScene(scene);
         stage.show();
+        //stage.setResizable(false);
     }
 
     public static void main(String[] args) {
