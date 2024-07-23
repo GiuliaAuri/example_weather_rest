@@ -17,7 +17,7 @@
    <children>
       <VBox alignment="TOP_CENTER" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <HBox alignment="TOP_CENTER" prefHeight="93.0" prefWidth="1050.0" style="-fx-background-color: #ffffff;">
+            <HBox id="SearchBox" fx:id="searchBox" alignment="TOP_CENTER" prefHeight="93.0" prefWidth="1050.0" style="-fx-background-color: #ffffff;">
                <children>
                   <ImageView fitHeight="28.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
                      <HBox.margin>
@@ -60,7 +60,7 @@
                   <Insets />
                </VBox.margin>
             </HBox>
-            <HBox alignment="TOP_CENTER" prefHeight="535.0" prefWidth="1050.0">
+            <HBox id="resultBox" fx:id="resultBox" alignment="TOP_CENTER" prefHeight="535.0" prefWidth="1050.0" visible="false">
                <children>
                   <VBox prefHeight="530.0" prefWidth="525.0">
                      <children>

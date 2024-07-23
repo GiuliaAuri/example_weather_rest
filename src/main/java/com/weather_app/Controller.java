@@ -12,6 +12,7 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.HBox;
 
 import java.io.IOException;
 import java.time.LocalDateTime;
@@ -24,6 +25,10 @@ import static java.lang.Thread.sleep;
 
 
 public class Controller {
+    @FXML
+    private HBox searchBox;
+    @FXML
+    private HBox resultBox;
     @FXML
     private TableView<WeatherData> TableWeather;
     @FXML private TableColumn<WeatherData, String> weatherColumn;
@@ -45,6 +50,7 @@ public class Controller {
     private WeatherRequest weatherRequest = new WeatherRequest();
 
     public void onButtonSearchClick() {
+        resultBox.setVisible(true);
         try {
             if (!citySearch.getText().isEmpty()) {
                 weatherDataList = weatherRequest.getWeatherData(citySearch.getText());
@@ -58,6 +64,8 @@ public class Controller {
 
     @FXML
     public void initialize() {
+        resultBox.setVisible(false);
+
         weatherColumn.setCellValueFactory(new PropertyValueFactory<>("main")); // Rimanere con il campo main
         weatherColumn.setCellFactory(column -> new TableCell<WeatherData, String>() {
             private final ImageView imageView = new ImageView();
@@ -92,9 +100,6 @@ public class Controller {
         temperatureMinColumn.setCellValueFactory(new PropertyValueFactory<>("temperatureMin"));
         temperatureMaxColumn.setCellValueFactory(new PropertyValueFactory<>("temperatureMax"));
 
-        weatherDataList = weatherRequest.getWeatherData("Modena");
-        loadData();
-        TableWeather.setSelectionModel(null);
 
     }
 
