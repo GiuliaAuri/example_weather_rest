@@ -4,10 +4,10 @@
     -fx-background-size: cover;
     -fx-background-repeat: no-repeat;
 }
-/*.HBox{
-    -fx-background-color: rgba(255, 255, 255, 0.2);
+.HBox{
+    -fx-background-color: rgba(255, 255, 255, 0.5);
     -fx-effect: dropshadow(gaussian, rgba(255, 255, 255, 0.2), 10, 0.2, 0, 0);
-}*/
+}
 /* table forecast */
 .table-view {
     -fx-background-color: rgba(255, 255, 255, 0.2); /* Sfondo bianco semitrasparente */
