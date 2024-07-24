@@ -54,7 +54,7 @@ public class WeatherRequest extends  RequestMaker{
             if (!response.isSuccessful()) {
                 throw new RuntimeException("Unsuccessful response: code = " + response.code());
             }
-            System.out.println("DEBUG"+response.toString());
+            System.out.println("DEBUG"+response);
             ResponseBody responseBody = response.body();
             JsonNode bodyNode = mapper.readTree(responseBody.string());
 
@@ -67,7 +67,7 @@ public class WeatherRequest extends  RequestMaker{
                 if(i>12)
                     break;
                 WeatherData tmp = new WeatherData();
-                tmp.setCity(geoCoordinate.getCity().toString());
+                tmp.setCity(geoCoordinate.getCity());
                 tmp.setDescription(weatherNode.get("weather").get(0).get("description").asText());
                 tmp.setTemperatureMin(weatherNode.get("main").get("temp_min").asDouble());
                 tmp.setTemperatureMax(weatherNode.get("main").get("temp_max").asDouble());
@@ -77,13 +77,13 @@ public class WeatherRequest extends  RequestMaker{
                 tmp.setDatetime(StringToLocalDateTime(weatherNode.get("dt_txt").asText()));
 
                 weatherDataList.add(tmp);
-                System.out.println("DEBUG-"+i + tmp.toString());
+                System.out.println("DEBUG-"+i + tmp);
                 i++;
             }
 
             return weatherDataList;
         } catch (IOException e) {
-            throw new RuntimeException("Errore nella comunicazione con l'API: " + e.getMessage());
+            throw new RuntimeException("Error in communication with the API: " + e.getMessage());
         }
     }
     public LocalDateTime StringToLocalDateTime(String dateTimeString){
@@ -91,7 +91,7 @@ public class WeatherRequest extends  RequestMaker{
 
         LocalDateTime dateTime = LocalDateTime.parse(dateTimeString, formatter);
 
-        System.out.println("DEBUG - La data e ora convertite: " + dateTime);
+        System.out.println("DEBUG - The date and time converted: " + dateTime);
         return dateTime;
     }
 

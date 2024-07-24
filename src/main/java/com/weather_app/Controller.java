@@ -4,7 +4,7 @@ import com.weather_app.model.WeatherData;
 import com.weather_app.rest.WeatherRequest;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.event.ActionEvent;
+
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.control.TableColumn;
@@ -14,14 +14,12 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.HBox;
 
-import java.io.IOException;
+
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.stream.StreamSupport;
 
-import static java.lang.Thread.sleep;
+import java.util.List;
+
 
 
 public class Controller {
@@ -46,8 +44,8 @@ public class Controller {
     @FXML private Button buttonSearch;
     @FXML private ImageView iconWeather;
     private List<WeatherData> weatherDataList;
-    private ObservableList<WeatherData> weatherDataObservableList = FXCollections.observableArrayList();
-    private WeatherRequest weatherRequest = new WeatherRequest();
+    private final ObservableList<WeatherData> weatherDataObservableList = FXCollections.observableArrayList();
+    private final WeatherRequest weatherRequest = new WeatherRequest();
 
     public void onButtonSearchClick() {
         try {
@@ -57,7 +55,7 @@ public class Controller {
             }
         }
         catch (RuntimeException e){
-            showError("Errore di ricerca", e.getMessage());
+            showError("Error in search", e.getMessage());
         }
     }
 
@@ -65,7 +63,7 @@ public class Controller {
     public void initialize() {
         resultBox.setVisible(false);
 
-        weatherColumn.setCellValueFactory(new PropertyValueFactory<>("main")); // Rimanere con il campo main
+        weatherColumn.setCellValueFactory(new PropertyValueFactory<>("main"));
         weatherColumn.setCellFactory(column -> new TableCell<WeatherData, String>() {
             private final ImageView imageView = new ImageView();
 
@@ -75,7 +73,7 @@ public class Controller {
                 if (empty || item == null) {
                     setGraphic(null);
                 } else {
-                    imageView.setImage(loadWeatherIconTable(item)); // Carica l'icona basata sul valore
+                    imageView.setImage(loadWeatherIconTable(item));
                     imageView.setFitHeight(40);
                     imageView.setFitWidth(40);
                     setGraphic(imageView);
@@ -120,7 +118,7 @@ public class Controller {
             citySearch.clear();
         }
         else{
-            showError("Nessun dato trovato", "Non sono stati trovati dati per la città inserita.");
+            showError("No data found", "No data was found for the city entered.");
         }
 
     }
@@ -145,8 +143,6 @@ public class Controller {
     ObservableList<WeatherData> getWeatherDataTable(){
         weatherDataObservableList.clear();
         for (int i = 1; i <  Math.min(weatherDataList.size(), 12); i++) {
-            WeatherData currentWeather = weatherDataList.get(i);
-
             weatherDataObservableList.add(weatherDataList.get(i));
 
         }
@@ -161,7 +157,7 @@ public class Controller {
      */
     private String getPathIcon(String LoadWeatherIcon)
     {
-        String iconPath = "";
+        String iconPath;
 
         switch (LoadWeatherIcon.toLowerCase()) {
             case "clear":

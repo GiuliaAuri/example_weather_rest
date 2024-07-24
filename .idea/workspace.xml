@@ -4,15 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="51e4e65c-098f-4a27-87dd-bcf41a45d216" name="Changes" comment="update">
+    <list default="true" id="51e4e65c-098f-4a27-87dd-bcf41a45d216" name="Changes" comment="update (ho tolto commenti in italiano)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/weather_app/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/weather_app/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/weather_app/WeatherApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/weather_app/WeatherApp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/weather_app/rest/GeoCoordinateRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/weather_app/rest/GeoCoordinateRequest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/weather_app/rest/WeatherRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/weather_app/rest/WeatherRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/weather_app/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/weather_app/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/weather_app/weather-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/weather_app/weather-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,7 +118,7 @@
       <workItem from="1721549988434" duration="7088000" />
       <workItem from="1721645357249" duration="4903000" />
       <workItem from="1721746342825" duration="3474000" />
-      <workItem from="1721818687406" duration="4962000" />
+      <workItem from="1721818687406" duration="8485000" />
     </task>
     <task id="LOCAL-00001" summary="Update">
       <option name="closed" value="true" />
@@ -332,7 +328,15 @@
       <option name="project" value="LOCAL" />
       <updated>1721827293156</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="update (ho tolto commenti in italiano)">
+      <option name="closed" value="true" />
+      <created>1721829362350</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1721829362350</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -355,7 +359,8 @@
     <MESSAGE value="Add shadow effect to HBox" />
     <MESSAGE value="corretto il ridimensionamento" />
     <MESSAGE value="update" />
-    <option name="LAST_COMMIT_MESSAGE" value="update" />
+    <MESSAGE value="update (ho tolto commenti in italiano)" />
+    <option name="LAST_COMMIT_MESSAGE" value="update (ho tolto commenti in italiano)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

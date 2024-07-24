@@ -43,7 +43,7 @@ public class GeoCoordinateRequest extends RequestMaker{
             if (!response.isSuccessful()) {
                 throw new RuntimeException("Unsuccessful response: code = " + response.code());
             }
-            System.out.println("DEBUG"+response.toString());
+            System.out.println("DEBUG"+response);
             ResponseBody responseBody = response.body();
             JsonNode bodyNode = mapper.readTree(responseBody.string());
 
@@ -51,7 +51,7 @@ public class GeoCoordinateRequest extends RequestMaker{
             GeoCoordinate coordinates = new GeoCoordinate();
 
 
-            if (bodyNode.isArray() && bodyNode.size() > 0) {
+            if (bodyNode.isArray() && !bodyNode.isEmpty()) {
                 JsonNode firstItem = bodyNode.get(0);
                 JsonNode latNode = firstItem.get("lat");
                 JsonNode lonNode = firstItem.get("lon");
