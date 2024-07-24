@@ -50,7 +50,6 @@ public class Controller {
     private WeatherRequest weatherRequest = new WeatherRequest();
 
     public void onButtonSearchClick() {
-        resultBox.setVisible(true);
         try {
             if (!citySearch.getText().isEmpty()) {
                 weatherDataList = weatherRequest.getWeatherData(citySearch.getText());
@@ -109,6 +108,7 @@ public class Controller {
     private void loadData() {
         if (weatherDataList != null && !weatherDataList.isEmpty()) {
             WeatherData currentWeather = weatherDataList.get(0);
+            resultBox.setVisible(true);
             cityLabel.setText(currentWeather.getCity().toUpperCase());
             temperatureLabel.setText(String.format("%.2f °C\n%.2f °C", currentWeather.getTemperatureMin(), currentWeather.getTemperatureMax()));
             descriptionLabel.setText(currentWeather.getDescription());

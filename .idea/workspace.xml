@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="51e4e65c-098f-4a27-87dd-bcf41a45d216" name="Changes" comment="Add shadow effect to HBox">
+    <list default="true" id="51e4e65c-098f-4a27-87dd-bcf41a45d216" name="Changes" comment="corretto il ridimensionamento">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/weather_app/WeatherApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/weather_app/WeatherApp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/weather_app/weather-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/weather_app/weather-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -117,7 +116,7 @@
       <workItem from="1721549988434" duration="7088000" />
       <workItem from="1721645357249" duration="4903000" />
       <workItem from="1721746342825" duration="3474000" />
-      <workItem from="1721818687406" duration="1665000" />
+      <workItem from="1721818687406" duration="3046000" />
     </task>
     <task id="LOCAL-00001" summary="Update">
       <option name="closed" value="true" />
@@ -311,7 +310,15 @@
       <option name="project" value="LOCAL" />
       <updated>1721750334445</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="corretto il ridimensionamento">
+      <option name="closed" value="true" />
+      <created>1721825712128</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1721825712128</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -332,7 +339,8 @@
     <MESSAGE value="Update" />
     <MESSAGE value="resultBox is visible after click on serachButton" />
     <MESSAGE value="Add shadow effect to HBox" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add shadow effect to HBox" />
+    <MESSAGE value="corretto il ridimensionamento" />
+    <option name="LAST_COMMIT_MESSAGE" value="corretto il ridimensionamento" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
