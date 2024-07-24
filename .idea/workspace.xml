@@ -6,8 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="51e4e65c-098f-4a27-87dd-bcf41a45d216" name="Changes" comment="Add shadow effect to HBox">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/weather_app/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/weather_app/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/weather_app/WeatherApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/weather_app/WeatherApp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/weather_app/weather-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/weather_app/weather-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -117,7 +116,8 @@
       <workItem from="1721384065481" duration="13065000" />
       <workItem from="1721549988434" duration="7088000" />
       <workItem from="1721645357249" duration="4903000" />
-      <workItem from="1721746342825" duration="3184000" />
+      <workItem from="1721746342825" duration="3474000" />
+      <workItem from="1721818687406" duration="1665000" />
     </task>
     <task id="LOCAL-00001" summary="Update">
       <option name="closed" value="true" />
@@ -303,7 +303,15 @@
       <option name="project" value="LOCAL" />
       <updated>1721748465900</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Add shadow effect to HBox">
+      <option name="closed" value="true" />
+      <created>1721750334445</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1721750334445</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
