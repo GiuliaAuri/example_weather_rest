@@ -64,7 +64,7 @@ public class Controller {
         resultBox.setVisible(false);
 
         weatherColumn.setCellValueFactory(new PropertyValueFactory<>("main"));
-        weatherColumn.setCellFactory(column -> new TableCell<WeatherData, String>() {
+        weatherColumn.setCellFactory(column -> new TableCell<>() {
             private final ImageView imageView = new ImageView();
 
             @Override
@@ -81,7 +81,7 @@ public class Controller {
             }
         });
         timeColumn.setCellValueFactory(new PropertyValueFactory<>("datetime"));
-        timeColumn.setCellFactory(column -> new TableCell<WeatherData, LocalDateTime>() {
+        timeColumn.setCellFactory(column -> new TableCell<>() {
             private final DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd MMM, HH:mm");
 
             @Override
@@ -105,7 +105,7 @@ public class Controller {
      */
     private void loadData() {
         if (weatherDataList != null && !weatherDataList.isEmpty()) {
-            WeatherData currentWeather = weatherDataList.get(0);
+            WeatherData currentWeather = weatherDataList.getFirst();
             resultBox.setVisible(true);
             cityLabel.setText(currentWeather.getCity().toUpperCase());
             temperatureLabel.setText(String.format("%.2f °C\n%.2f °C", currentWeather.getTemperatureMin(), currentWeather.getTemperatureMax()));
