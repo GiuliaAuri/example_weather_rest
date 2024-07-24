@@ -138,13 +138,13 @@ public class Controller {
     /**
      * A method that prepares a list of weather data to be
      * displayed in TableView and limiting the display to a maximum
-     * of 7 items.
+     * of 11 items (12*3=36 hours).
      * @return an observable list of weather data to be displayed in
      * the TableView
      */
     ObservableList<WeatherData> getWeatherDataTable(){
         weatherDataObservableList.clear();
-        for (int i = 0; i <  Math.min(weatherDataList.size(), 12); i++) {
+        for (int i = 1; i <  Math.min(weatherDataList.size(), 12); i++) {
             WeatherData currentWeather = weatherDataList.get(i);
 
             weatherDataObservableList.add(weatherDataList.get(i));
@@ -203,6 +203,11 @@ public class Controller {
         return new Image(getClass().getResourceAsStream(getPathIcon(LoadWeatherIcon)));
     }
 
+    /**
+    * A method that shows the error that occurred
+     * @param message message of the error
+     * @param title title of the error
+    */
     private void showError(String title, String message)
     {
         Alert alert=new Alert(Alert.AlertType.ERROR);

@@ -11,8 +11,7 @@ import java.net.URL;
 
 
 public class GeoCoordinateRequest extends RequestMaker{
-    //indirizzo
-    // https://api.openweathermap.org/geo/1.0/direct?q=London&limit=1&appid=75c0bdc915749108790c7c447dd77bc9
+
     String protocol = "https";
     String host = "api.openweathermap.org";
     String path = "geo/1.0/direct";
@@ -21,7 +20,6 @@ public class GeoCoordinateRequest extends RequestMaker{
             .directory("./.env")
             .load();
     String APIKEY = dotenv.get("API_KEY");
-
 
     public GeoCoordinate getGeoCoordinate(String city) {
 
@@ -37,7 +35,6 @@ public class GeoCoordinateRequest extends RequestMaker{
         Request request = new Request.Builder()
                 .url(myurl)
                 .build();
-
 
         Call call = client.newCall(request);
 

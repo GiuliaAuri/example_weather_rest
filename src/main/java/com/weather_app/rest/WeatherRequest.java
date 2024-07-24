@@ -16,8 +16,6 @@ import java.util.List;
 
 public class WeatherRequest extends  RequestMaker{
 
-
-    //http://api.openweathermap.org/data/2.5/forecast?lat=44.34&lon=10.99&appid=75c0bdc915749108790c7c447dd77bc9
     String protocol="http";
     String host="api.openweathermap.org";
     String path="data/2.5/forecast";
@@ -59,9 +57,7 @@ public class WeatherRequest extends  RequestMaker{
             System.out.println("DEBUG"+response.toString());
             ResponseBody responseBody = response.body();
             JsonNode bodyNode = mapper.readTree(responseBody.string());
-            /*if (bodyNode.has("message")) {
-                throw new RuntimeException("Errore API: " + bodyNode.get("message").asText());
-            }*/
+
             System.out.println("DEBUG"+bodyNode.toString());
 
 

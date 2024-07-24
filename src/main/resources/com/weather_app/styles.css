@@ -8,7 +8,7 @@
     -fx-background-color: rgba(255, 255, 255, 0.5);
     -fx-effect: dropshadow(gaussian, rgba(255, 255, 255, 0.2), 10, 0.2, 0, 0);
 }
-/* table forecast */
+/* table weather forecast */
 .table-view {
     -fx-background-color: rgba(255, 255, 255, 0.2); /* Sfondo bianco semitrasparente */
     -fx-background-insets: 0;
@@ -40,7 +40,7 @@
     -fx-border-width: 0;
     -fx-font-size: 0;
 }
-/* Nascondi la barra di scorrimento orizzontale */
+/* Hide the horizontal scroll bar */
 .table-view .scroll-bar:horizontal {
     -fx-opacity: 0;
     -fx-max-height: 0;
@@ -48,7 +48,7 @@
     -fx-min-height: 0;
 }
 
-/* Nasconde le righe vuote */
+/* Hide the blank lines */
 .table-row-cell:empty {
     -fx-background-color: transparent;
 }
