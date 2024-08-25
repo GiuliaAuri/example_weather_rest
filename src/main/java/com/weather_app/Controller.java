@@ -23,8 +23,7 @@ import java.util.List;
 
 
 public class Controller {
-    @FXML
-    private HBox searchBox;
+
     @FXML
     private HBox resultBox;
     @FXML
@@ -41,7 +40,6 @@ public class Controller {
     @FXML private Label humidityLabel;
     @FXML private Label windSpeedLabel;
     @FXML private TextField citySearch;
-    @FXML private Button buttonSearch;
     @FXML private ImageView iconWeather;
     private List<WeatherData> weatherDataList;
     private final ObservableList<WeatherData> weatherDataObservableList = FXCollections.observableArrayList();
