@@ -157,36 +157,20 @@ public class Controller {
      */
     private String getPathIcon(String LoadWeatherIcon)
     {
-        String iconPath;
 
-        switch (LoadWeatherIcon.toLowerCase()) {
-            case "clear":
-                iconPath = "/img/clear.png";
-                break;
-            case "clouds":
-                iconPath = "/img/clouds.png";
-                break;
-            case "drizzle":
-                iconPath="/img/drizzle.png";
-                break;
-            case "mist":
-                iconPath="/img/mist.webp";
-                break;
-            case "rain":
-                iconPath="/img/rain.png";
-                break;
-            case "snow":
-                iconPath="/img/snow.png";
-                break;
-            case "thunderstorm":
-                iconPath="/img/thunderstorm.webp";
-                break;
-            default:
+        return switch (LoadWeatherIcon.toLowerCase()) {
+            case "clear" -> "/img/clear.png";
+            case "clouds" -> "/img/clouds.png";
+            case "drizzle" -> "/img/drizzle.png";
+            case "mist" -> "/img/mist.webp";
+            case "rain" -> "/img/rain.png";
+            case "snow" -> "/img/snow.png";
+            case "thunderstorm" -> "/img/thunderstorm.webp";
+            default -> {
                 System.out.println("Error no icon has been found");
-                iconPath="/img/default.png";
-                break;
-        }
-        return iconPath;
+                yield "/img/default.png";
+            }
+        };
     }
 
     /**
