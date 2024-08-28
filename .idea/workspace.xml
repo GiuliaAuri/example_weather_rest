@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="51e4e65c-098f-4a27-87dd-bcf41a45d216" name="Changes" comment="update: remove many warnings" />
+    <list default="true" id="51e4e65c-098f-4a27-87dd-bcf41a45d216" name="Changes" comment="update: remove many warnings">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/weather_app/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/weather_app/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/weather_app/rest/GeoCoordinateRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/weather_app/rest/GeoCoordinateRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/weather_app/rest/WeatherRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/weather_app/rest/WeatherRequest.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -116,6 +121,10 @@
       <workItem from="1721818687406" duration="10659000" />
       <workItem from="1724073670665" duration="27000" />
       <workItem from="1724605737826" duration="275000" />
+      <workItem from="1724606649241" duration="315000" />
+      <workItem from="1724664575629" duration="326000" />
+      <workItem from="1724775342797" duration="827000" />
+      <workItem from="1724863472694" duration="3268000" />
     </task>
     <task id="LOCAL-00001" summary="Update">
       <option name="closed" value="true" />
@@ -357,7 +366,15 @@
       <option name="project" value="LOCAL" />
       <updated>1724605973900</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="update: remove many warnings">
+      <option name="closed" value="true" />
+      <created>1724606928430</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1724606928430</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

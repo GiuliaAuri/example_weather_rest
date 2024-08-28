@@ -21,6 +21,13 @@ public class GeoCoordinateRequest extends RequestMaker{
             .load();
     String APIKEY = dotenv.get("API_KEY");
 
+    /**
+     * Constructs the URL for the API request,
+     * creates the HTTP request, executes the API call,
+     * processes the response, and extracts the coordinates.
+     * @param city The name of the city for which the coordinates are requested
+     * @return GeoCoordinate The geographical coordinates corresponding to the specified city
+     */
     public GeoCoordinate getGeoCoordinate(String city) {
 
         URL myurl = new HttpUrl.Builder()

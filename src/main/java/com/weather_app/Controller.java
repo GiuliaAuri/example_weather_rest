@@ -99,7 +99,7 @@ public class Controller {
     }
 
     /**
-     * A method that loads current weather data
+     *Loads the current weather data
      */
     private void loadData() {
         if (weatherDataList != null && !weatherDataList.isEmpty()) {
@@ -122,7 +122,7 @@ public class Controller {
     }
 
     /**
-     * A method filling table containing forecast for next 24 hours
+     * Fills the table with the weather forecast for the next 24 hours
      */
     private void loadTableData(){
 
@@ -132,10 +132,9 @@ public class Controller {
     }
 
     /**
-     * A method that prepares a list of weather data to be
-     * displayed in TableView and limiting the display to a maximum
-     * of 11 items (12*3=36 hours).
-     * @return an observable list of weather data to be displayed in
+     * Prepares a list of weather data to be displayed in the TableView,
+     * limiting the display to a maximum of 12 items (up to 36 hours).
+     * @return An observable list of weather data to be displayed in
      * the TableView
      */
     ObservableList<WeatherData> getWeatherDataTable(){
@@ -149,9 +148,9 @@ public class Controller {
 
 
     /**
-     * A method that calculates the correspondence between weather and icon
-     * @param LoadWeatherIcon represents the weather
-     * @return the path of icon
+     * Determines the corresponding icon path for the given weather condition
+     * @param LoadWeatherIcon A string represents the weather
+     * @return The path to the corresponding weather icon
      */
     private String getPathIcon(String LoadWeatherIcon)
     {
@@ -172,8 +171,8 @@ public class Controller {
     }
 
     /**
-     * A method that loads the icon of the weather in the table
-     * @param LoadWeatherIcon represents the weather
+     * Loads the weather icon for display in the table
+     * @param LoadWeatherIcon a string represents the weather
      * @return Image represents weather icon
      */
     private Image loadWeatherIconTable(String LoadWeatherIcon)
@@ -182,9 +181,9 @@ public class Controller {
     }
 
     /**
-    * A method that shows the error that occurred
-     * @param message message of the error
-     * @param title title of the error
+     * Displays an error message to the user
+     * @param message The error message to display
+     * @param title The title of the error alert
     */
     private void showError(String title, String message)
     {

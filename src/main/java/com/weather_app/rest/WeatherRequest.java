@@ -13,7 +13,6 @@ import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 
-
 public class WeatherRequest extends  RequestMaker{
 
     String protocol="http";
@@ -24,6 +23,14 @@ public class WeatherRequest extends  RequestMaker{
             .directory("./.env")
             .load();
     String APIKEY = dotenv.get("API_KEY");
+
+    /*
+    *  Constructs the URL for the API request,
+    * executes the request, and processes the response,
+    * returning a list of weather data for the specified city
+    * @param city The name of the city for which to retrieve weather data
+    * @return List<WeatherData>  A list of WeatherData objects containing weather information for the specified city
+    */
     public List<WeatherData> getWeatherData(String city){
         GeoCoordinateRequest geoCoordinateRequest= new GeoCoordinateRequest();
         GeoCoordinate geoCoordinate=geoCoordinateRequest.getGeoCoordinate(city);
@@ -86,6 +93,12 @@ public class WeatherRequest extends  RequestMaker{
             throw new RuntimeException("Error in communication with the API: " + e.getMessage());
         }
     }
+    /**
+     * Converts a string representing date and time into a LocalDateTime object
+     * according to the specified format
+     * @param dateTimeString The string representing date and time
+     * @return LocalDateTime
+     */
     public LocalDateTime StringToLocalDateTime(String dateTimeString){
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
 
