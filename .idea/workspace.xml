@@ -4,11 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="51e4e65c-098f-4a27-87dd-bcf41a45d216" name="Changes" comment="update: remove many warnings">
+    <list default="true" id="51e4e65c-098f-4a27-87dd-bcf41a45d216" name="Changes" comment="update: comments">
+      <change afterPath="$PROJECT_DIR$/src/main/java/doc/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/img/cloudsbackground.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/img/daoudi-aissa-Pe1Ol9oLc4o-unsplash.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/img/mistbackground.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/img/rain.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/img/snow-7761569_1280.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/img/snowbackground.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/img/sunbackground.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/img/thunderstormbackground.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/weather_app/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/weather_app/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/weather_app/rest/GeoCoordinateRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/weather_app/rest/GeoCoordinateRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/weather_app/rest/WeatherRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/weather_app/rest/WeatherRequest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +58,7 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/giuli/IdeaProjects/example_weather/src/main/resources&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/giuli/IdeaProjects/example_weather/src/main/resources/img&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -64,6 +70,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\giuli\IdeaProjects\example_weather\src\main\resources\img" />
       <recent name="C:\Users\giuli\IdeaProjects\example_weather\src\main\resources" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -124,7 +131,9 @@
       <workItem from="1724606649241" duration="315000" />
       <workItem from="1724664575629" duration="326000" />
       <workItem from="1724775342797" duration="827000" />
-      <workItem from="1724863472694" duration="3268000" />
+      <workItem from="1724863472694" duration="4069000" />
+      <workItem from="1724938252787" duration="2363000" />
+      <workItem from="1725010389687" duration="1984000" />
     </task>
     <task id="LOCAL-00001" summary="Update">
       <option name="closed" value="true" />
@@ -374,7 +383,15 @@
       <option name="project" value="LOCAL" />
       <updated>1724606928430</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="update: comments">
+      <option name="closed" value="true" />
+      <created>1724867099719</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1724867099719</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -400,7 +417,8 @@
     <MESSAGE value="update (ho tolto commenti in italiano)" />
     <MESSAGE value="update and translate error message" />
     <MESSAGE value="update: remove many warnings" />
-    <option name="LAST_COMMIT_MESSAGE" value="update: remove many warnings" />
+    <MESSAGE value="update: comments" />
+    <option name="LAST_COMMIT_MESSAGE" value="update: comments" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
