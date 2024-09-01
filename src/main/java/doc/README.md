@@ -1,9 +1,10 @@
 # 🌦️ Weather Application
 (foto screen)
-### Features
 
+### Features
 - 🌍 **Global Weather Data**: Access weather information for any city around the world.
 - ⏰ **Real-Time Updates**: Get the latest weather conditions and forecasts
+- 
 ### Description
 This Weather Application is a Java-based application that allows users to fetch and display weather information for a specified city. It uses JavaFX for the user interface and OkHttp to make HTTP requests to the OpenWeatherMap API. The application provides current weather conditions as well as forecasts for the next 36 hours.
 

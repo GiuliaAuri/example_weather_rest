@@ -14,6 +14,7 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
 
 
@@ -21,10 +22,12 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
 import java.util.List;
-import java.util.Objects;
+
 
 
 public class Controller {
+    @FXML
+    private AnchorPane rootPane;
 
     @FXML
     private HBox resultBox;
@@ -118,6 +121,10 @@ public class Controller {
             windSpeedLabel.setText(String.format("%.2f km/h", currentWeather.getWindSpeed()));
 
             iconWeather.setImage(new Image(getClass().getResourceAsStream(getPathIcon(currentWeather.getMain()))));
+
+            String backgroundImage=getBackgroundImage(currentWeather.getMain());
+            rootPane.setStyle("-fx-background-image: url('" + backgroundImage + "'); -fx-background-size: cover; -fx-background-repeat: no-repeat;");
+
             loadTableData();
             citySearch.clear();
         }
@@ -185,7 +192,21 @@ public class Controller {
     {
         return new Image(getClass().getResourceAsStream(getPathIcon(LoadWeatherIcon)));
     }
-
+    /**
+     *
+     * */
+    private String getBackgroundImage(String weatherCondition) {
+        return switch (weatherCondition.toLowerCase()) {
+            case "clear" -> getClass().getResource("/img/sunbackground.jpg").toExternalForm();
+            case "clouds" -> getClass().getResource("/img/cloudsbackground.jpg").toExternalForm();
+            case "drizzle" -> getClass().getResource("/img/cloudsbackgroundDefault.jpg").toExternalForm();
+            case "mist" -> getClass().getResource("/img/mistbackground.jpg").toExternalForm();
+            case "rain" -> getClass().getResource("/img/rainbackground.jpg").toExternalForm();
+            case "snow" -> getClass().getResource("/img/snowbackground.jpg").toExternalForm();
+            case "thunderstorm" -> getClass().getResource("/img/thunderstormbackground.jpg").toExternalForm();
+            default -> getClass().getResource("/img/cloudsbackgroundDefault.jpg").toExternalForm();
+        };
+    }
     /**
      * Displays an error message to the user
      * @param message The error message to display
