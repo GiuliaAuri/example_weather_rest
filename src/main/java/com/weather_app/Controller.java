@@ -18,6 +18,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
 
 
+import java.io.InputStream;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
@@ -120,7 +121,10 @@ public class Controller {
             humidityLabel.setText(String.format("%d%%", currentWeather.getHumidity()));
             windSpeedLabel.setText(String.format("%.2f km/h", currentWeather.getWindSpeed()));
 
-            iconWeather.setImage(new Image(getClass().getResourceAsStream(getPathIcon(currentWeather.getMain()))));
+            InputStream iconStream = getClass().getResourceAsStream(getPathIcon(currentWeather.getMain()));
+            if (iconStream != null) {
+                iconWeather.setImage(new Image(iconStream));
+            }
 
             String backgroundImage=getBackgroundImage(currentWeather.getMain());
             rootPane.setStyle("-fx-background-image: url('" + backgroundImage + "'); -fx-background-size: cover; -fx-background-repeat: no-repeat;");
@@ -190,7 +194,11 @@ public class Controller {
      */
     private Image loadWeatherIconTable(String LoadWeatherIcon)
     {
-        return new Image(getClass().getResourceAsStream(getPathIcon(LoadWeatherIcon)));
+        InputStream iconStream = getClass().getResourceAsStream(getPathIcon(LoadWeatherIcon));
+        if (iconStream != null) {
+            return new Image(iconStream);
+        }
+        return null;
     }
 
     /**

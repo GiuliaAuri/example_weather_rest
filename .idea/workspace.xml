@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="51e4e65c-098f-4a27-87dd-bcf41a45d216" name="Changes" comment="update">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/weather_app/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/weather_app/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/weather_app/WeatherApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/weather_app/WeatherApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/weather_app/rest/GeoCoordinateRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/weather_app/rest/GeoCoordinateRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/weather_app/rest/WeatherRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/weather_app/rest/WeatherRequest.java" afterDir="false" />
-    </list>
+    <list default="true" id="51e4e65c-098f-4a27-87dd-bcf41a45d216" name="Changes" comment="update: remove warnings" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -148,7 +142,7 @@
       <workItem from="1725010389687" duration="2298000" />
       <workItem from="1725184988397" duration="3187000" />
       <workItem from="1725202081104" duration="56000" />
-      <workItem from="1725223754699" duration="5779000" />
+      <workItem from="1725223754699" duration="6114000" />
     </task>
     <task id="LOCAL-00001" summary="Update">
       <option name="closed" value="true" />
@@ -470,7 +464,15 @@
       <option name="project" value="LOCAL" />
       <updated>1725228863456</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="update: remove warnings">
+      <option name="closed" value="true" />
+      <created>1725231576702</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1725231576702</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -502,7 +504,8 @@
     <MESSAGE value="update: add black shadow" />
     <MESSAGE value="update: add andata a capo" />
     <MESSAGE value="update" />
-    <option name="LAST_COMMIT_MESSAGE" value="update" />
+    <MESSAGE value="update: remove warnings" />
+    <option name="LAST_COMMIT_MESSAGE" value="update: remove warnings" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
