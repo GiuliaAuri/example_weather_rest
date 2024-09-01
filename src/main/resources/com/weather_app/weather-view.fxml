@@ -35,23 +35,20 @@
                         <Font name="System Bold" size="14.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="citySearch" onAction="#onButtonSearchClick" prefHeight="25.0" prefWidth="160.0" promptText="Enter your city">
-                     <HBox.margin>
-                        <Insets />
-                     </HBox.margin>
-                  </TextField>
-                  <Button fx:id="buttonSearch" mnemonicParsing="false" onAction="#onButtonSearchClick" prefHeight="14.0" prefWidth="23.0">
-                     <HBox.margin>
-                        <Insets left="5.0" />
-                     </HBox.margin>
-                     <graphic>
-                        <ImageView fitHeight="17.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../img/search.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                  </Button>
+                  <AnchorPane prefHeight="92.0" prefWidth="204.0">
+                     <children>
+                        <TextField fx:id="citySearch" layoutX="7.0" layoutY="30.0" onAction="#onButtonSearchClick" prefHeight="32.0" prefWidth="190.0" promptText="Enter your city" />
+                        <Button fx:id="buttonSearch" layoutX="158.0" layoutY="33.0" mnemonicParsing="false" onAction="#onButtonSearchClick" prefHeight="18.0" prefWidth="38.0" styleClass="search-button">
+                           <graphic>
+                              <ImageView fitHeight="19.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../img/search.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </AnchorPane>
                </children>
                <VBox.margin>
                   <Insets />
@@ -159,7 +156,7 @@
                   </VBox>
                   <VBox prefHeight="190.0" prefWidth="520.0">
                      <children>
-                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="18.0" prefWidth="518.0" text="WEATHER FORECAST" textAlignment="CENTER" textFill="#ffdc53">
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="18.0" prefWidth="518.0" styleClass="weather-forecast" text="WEATHER FORECAST" textAlignment="CENTER" textFill="#ffdc53">
                            <font>
                               <Font name="System Bold" size="14.0" />
                            </font>

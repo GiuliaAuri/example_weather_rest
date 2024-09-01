@@ -3,6 +3,7 @@
     -fx-background-image: url("../../img/clouds-2329680_1280.jpg");
     -fx-background-size: cover;
     -fx-background-repeat: no-repeat;
+    -fx-background-color: rgba(255, 255, 255, 0.5);
 }
 .HBox{
     -fx-background-color: rgba(255, 255, 255, 0.5);
@@ -10,7 +11,7 @@
 }
 /* table weather forecast */
 .table-view {
-    -fx-background-color: rgba(255, 255, 255, 0.2); /* Sfondo bianco semitrasparente */
+    -fx-background-color: rgba(255, 255, 255, 0.8); /* Sfondo bianco semitrasparente */
     -fx-background-insets: 0;
     -fx-background-radius: 5;
     -fx-effect: dropshadow(gaussian, rgba(255, 255, 255, 0.2), 10, 0.2, 0, 0);
@@ -53,3 +54,21 @@
     -fx-background-color: transparent;
 }
 
+.text-field {
+    -fx-border-color: #00BFFF;
+    -fx-border-radius: 20px;
+    -fx-border-width: 4px;
+    -fx-background-radius: 20px;
+}
+
+.search-button {
+    -fx-background-color: #00BFFF;
+    -fx-background-radius: 20px;
+}
+
+.weather-forecast {
+    -fx-font-size: 20px;
+    -fx-text-fill: #FFD700;
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow(gaussian, black, 3, 0.5, 0, 0);
+}

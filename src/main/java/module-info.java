@@ -7,6 +7,7 @@ module com.example_weather {
         requires io.github.cdimascio.dotenv.java;
         requires java.desktop;
         requires annotations;
+        requires animatefx;
 
         opens com.weather_app to javafx.fxml;
 

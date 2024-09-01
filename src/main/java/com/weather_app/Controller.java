@@ -1,7 +1,9 @@
 package com.weather_app;
 
+import animatefx.animation.FadeIn;
 import com.weather_app.model.WeatherData;
 import com.weather_app.rest.WeatherRequest;
+import javafx.application.Platform;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
@@ -19,7 +21,7 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
 import java.util.List;
-
+import java.util.Objects;
 
 
 public class Controller {
@@ -46,6 +48,10 @@ public class Controller {
     private final WeatherRequest weatherRequest = new WeatherRequest();
 
     public void onButtonSearchClick() {
+        resultBox.setVisible(true);
+        Platform.runLater(() -> new FadeIn(resultBox).setSpeed(0.2).play());
+
+
         try {
             if (!citySearch.getText().isEmpty()) {
                 weatherDataList = weatherRequest.getWeatherData(citySearch.getText());
