@@ -192,9 +192,13 @@ public class Controller {
     {
         return new Image(getClass().getResourceAsStream(getPathIcon(LoadWeatherIcon)));
     }
+
     /**
+     * Loads the background image corresponding to the specified weather condition.
      *
-     * */
+     * @param weatherCondition A string representing the current weather condition.
+     * @return The URL of the appropriate background image as a string.
+     */
     private String getBackgroundImage(String weatherCondition) {
         return switch (weatherCondition.toLowerCase()) {
             case "clear" -> getClass().getResource("/img/sunbackground.jpg").toExternalForm();
@@ -207,6 +211,7 @@ public class Controller {
             default -> getClass().getResource("/img/cloudsbackgroundDefault.jpg").toExternalForm();
         };
     }
+
     /**
      * Displays an error message to the user
      * @param message The error message to display
