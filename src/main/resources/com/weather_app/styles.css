@@ -1,40 +1,46 @@
 /* styles.css */
 .root {
-    -fx-background-image: url("../../img/clouds-2329680_1280.jpg");
+    -fx-background-image: url("../../img/cloudsbackgroundDefault.jpg");
     -fx-background-size: cover;
     -fx-background-repeat: no-repeat;
     -fx-background-color: rgba(255, 255, 255, 0.5);
 }
 .HBox{
-    -fx-background-color: rgba(255, 255, 255, 0.5);
-    -fx-effect: dropshadow(gaussian, rgba(255, 255, 255, 0.2), 10, 0.2, 0, 0);
+    -fx-background-color: rgba(0, 0, 0, 0.5);
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 10, 0.2, 0, 0);
 }
 /* table weather forecast */
 .table-view {
-    -fx-background-color: rgba(255, 255, 255, 0.8); /* Sfondo bianco semitrasparente */
+    -fx-background-color: rgba(0, 0, 0, 0.8);
     -fx-background-insets: 0;
     -fx-background-radius: 5;
-    -fx-effect: dropshadow(gaussian, rgba(255, 255, 255, 0.2), 10, 0.2, 0, 0);
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 10, 0.2, 0, 0);
+
 }
 
 .table-view .column-header-background {
-    -fx-background-color: rgba(255, 255, 255, 0.2);
+    -fx-background-color: rgba(0, 0, 0, 0.2);
     -fx-padding: 0;
 }
 
 .table-view .table-cell {
-    -fx-background-color: rgba(255, 255, 255, 0.2);
+    -fx-background-color: rgba(0, 0, 0, 0.2);
+    -fx-text-fill: white;
 
 }
 
 .table-view .column-header {
-    -fx-background-color: rgba(255, 255, 255, 0.2);
+    -fx-background-color: rgba(0, 0, 0, 0.2);
     -fx-padding: 5;
     -fx-border-width: 0;
+
+}
+.table-view .column-header .label {
+    -fx-text-fill: white;
 }
 
 .table-view .table-row-cell {
-    -fx-background-color: rgba(255, 255, 255, 0.2);
+    -fx-background-color: rgba(0, 0, 0, 0.2);
 }
 .table-view .table-column > .label {
     -fx-padding: 0;
@@ -72,3 +78,16 @@
     -fx-font-weight: bold;
     -fx-effect: dropshadow(gaussian, black, 3, 0.5, 0, 0);
 }
+
+.label-text{
+    -fx-text-fill: white;
+    -fx-effect: dropshadow(gaussian, black, 3, 0.5, 0, 0);
+}
+
+.main-weather-icon {
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 10, 0.5, 0, 0);
+    -fx-border-color: white;
+    -fx-border-width: 2px;
+    -fx-border-radius: 5px;
+}
+
