@@ -66,7 +66,7 @@ public class Controller {
     @FXML
     public void initialize() {
         resultBox.setVisible(false);
-
+        TableWeather.setSelectionModel(null);
         weatherColumn.setCellValueFactory(new PropertyValueFactory<>("main"));
         weatherColumn.setCellFactory(column -> new TableCell<>() {
             private final ImageView imageView = new ImageView();
