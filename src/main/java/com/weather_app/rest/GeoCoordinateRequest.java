@@ -52,6 +52,9 @@ public class GeoCoordinateRequest extends RequestMaker{
             }
             System.out.println("DEBUG"+response);
             ResponseBody responseBody = response.body();
+            if(responseBody==null) {
+                throw new RuntimeException("RespondeBody is null");
+            }
             JsonNode bodyNode = mapper.readTree(responseBody.string());
 
             System.out.println("DEBUG"+bodyNode.toString());

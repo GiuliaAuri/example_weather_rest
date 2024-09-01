@@ -22,7 +22,7 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
 import java.util.List;
-
+import java.util.Objects;
 
 
 public class Controller {
@@ -201,14 +201,14 @@ public class Controller {
      */
     private String getBackgroundImage(String weatherCondition) {
         return switch (weatherCondition.toLowerCase()) {
-            case "clear" -> getClass().getResource("/img/sunbackground.jpg").toExternalForm();
-            case "clouds" -> getClass().getResource("/img/cloudsbackground.jpg").toExternalForm();
-            case "drizzle" -> getClass().getResource("/img/cloudsbackgroundDefault.jpg").toExternalForm();
-            case "mist" -> getClass().getResource("/img/mistbackground.jpg").toExternalForm();
-            case "rain" -> getClass().getResource("/img/rainbackground.jpg").toExternalForm();
-            case "snow" -> getClass().getResource("/img/snowbackground.jpg").toExternalForm();
-            case "thunderstorm" -> getClass().getResource("/img/thunderstormbackground.jpg").toExternalForm();
-            default -> getClass().getResource("/img/cloudsbackgroundDefault.jpg").toExternalForm();
+            case "clear" -> Objects.requireNonNull(getClass().getResource("/img/sunbackground.jpg")).toExternalForm();
+            case "clouds" -> Objects.requireNonNull(getClass().getResource("/img/cloudsbackground.jpg")).toExternalForm();
+            case "drizzle" -> Objects.requireNonNull(getClass().getResource("/img/cloudsbackgroundDefault.jpg")).toExternalForm();
+            case "mist" -> Objects.requireNonNull(getClass().getResource("/img/mistbackground.jpg")).toExternalForm();
+            case "rain" -> Objects.requireNonNull(getClass().getResource("/img/rainbackground.jpg")).toExternalForm();
+            case "snow" -> Objects.requireNonNull(getClass().getResource("/img/snowbackground.jpg")).toExternalForm();
+            case "thunderstorm" -> Objects.requireNonNull(getClass().getResource("/img/thunderstormbackground.jpg")).toExternalForm();
+            default -> Objects.requireNonNull(getClass().getResource("/img/cloudsbackgroundDefault.jpg")).toExternalForm();
         };
     }
 

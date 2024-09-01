@@ -35,7 +35,7 @@ public class WeatherRequest extends  RequestMaker{
         GeoCoordinateRequest geoCoordinateRequest= new GeoCoordinateRequest();
         GeoCoordinate geoCoordinate=geoCoordinateRequest.getGeoCoordinate(city);
         if(geoCoordinate.getLatitude()==0.0 || geoCoordinate.getLongitude()==0.0){
-            throw new RuntimeException("Error geoCoordinate is not valid");
+            throw new RuntimeException("Error geographic coordinates are not valid");
         }
 
         System.out.println("DEBUG-"+geocoordinate);
@@ -63,6 +63,10 @@ public class WeatherRequest extends  RequestMaker{
             }
             System.out.println("DEBUG"+response);
             ResponseBody responseBody = response.body();
+            if(responseBody==null) {
+                throw new RuntimeException("RespondeBody is null");
+            }
+
             JsonNode bodyNode = mapper.readTree(responseBody.string());
 
             System.out.println("DEBUG"+bodyNode.toString());
