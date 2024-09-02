@@ -1,5 +1,7 @@
 # 🌦️ Weather Application
-(foto screen)
+![img.png](img.png)
+![img_1.png](img_1.png)
+![img_2.png](img_2.png)
 
 ### Features
 - 🌍 **Global Weather Data**: Access weather information for any city around the world.

@@ -26,6 +26,7 @@
 .table-view .table-cell {
     -fx-background-color: rgba(0, 0, 0, 0.2);
     -fx-text-fill: white;
+    -fx-alignment: center;
 
 }
 
@@ -37,6 +38,7 @@
 }
 .table-view .column-header .label {
     -fx-text-fill: white;
+    -fx-alignment: center;
 }
 
 .table-view .table-row-cell {
