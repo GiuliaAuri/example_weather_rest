@@ -52,18 +52,19 @@ public class Controller {
     private final WeatherRequest weatherRequest = new WeatherRequest();
 
     public void onButtonSearchClick() {
-        resultBox.setVisible(true);
-        Platform.runLater(() -> new FadeIn(resultBox).setSpeed(0.2).play());
-
-
         try {
-            if (!citySearch.getText().isEmpty()) {
+            if (!citySearch.getText().isEmpty() && citySearch.getText().matches("^[a-zA-Z\\s]+$")) {
                 weatherDataList = weatherRequest.getWeatherData(citySearch.getText());
                 loadData();
+
+                Platform.runLater(() -> new FadeIn(resultBox).setSpeed(0.2).play());
             }
+            else
+                showError("Error in search","Input in the text field is invalid");
         }
         catch (RuntimeException e){
             showError("Error in search", e.getMessage());
+
         }
     }
 
@@ -133,6 +134,7 @@ public class Controller {
             citySearch.clear();
         }
         else{
+
             showError("No data found", "No data was found for the city entered.");
         }
 
@@ -227,10 +229,12 @@ public class Controller {
     */
     private void showError(String title, String message)
     {
+        resultBox.setVisible(false);
         Alert alert=new Alert(Alert.AlertType.ERROR);
         alert.setTitle(title);
         alert.setHeaderText(null);
         alert.setContentText(message);
         alert.showAndWait();
+
     }
 }
