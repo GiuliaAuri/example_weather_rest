@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="51e4e65c-098f-4a27-87dd-bcf41a45d216" name="Changes" comment="update: README.md">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="51e4e65c-098f-4a27-87dd-bcf41a45d216" name="Changes" comment="update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/weather_app/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/weather_app/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/weather_app/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/weather_app/styles.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -157,7 +155,10 @@
       <workItem from="1725403477473" duration="617000" />
       <workItem from="1725438600750" duration="16000" />
       <workItem from="1725458335307" duration="516000" />
-      <workItem from="1725486839814" duration="1884000" />
+      <workItem from="1725486839814" duration="2016000" />
+      <workItem from="1725526242729" duration="13000" />
+      <workItem from="1725650380152" duration="421000" />
+      <workItem from="1725828613114" duration="318000" />
     </task>
     <task id="LOCAL-00001" summary="Update">
       <option name="closed" value="true" />
@@ -495,7 +496,15 @@
       <option name="project" value="LOCAL" />
       <updated>1725280345353</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="update">
+      <option name="closed" value="true" />
+      <created>1725488835361</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1725488835362</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -526,10 +535,10 @@
     <MESSAGE value="update: add background change" />
     <MESSAGE value="update: add black shadow" />
     <MESSAGE value="update: add andata a capo" />
-    <MESSAGE value="update" />
     <MESSAGE value="update: remove warnings" />
     <MESSAGE value="update: README.md" />
-    <option name="LAST_COMMIT_MESSAGE" value="update: README.md" />
+    <MESSAGE value="update" />
+    <option name="LAST_COMMIT_MESSAGE" value="update" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

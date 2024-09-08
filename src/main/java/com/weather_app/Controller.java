@@ -59,8 +59,8 @@ public class Controller {
 
                 Platform.runLater(() -> new FadeIn(resultBox).setSpeed(0.2).play());
             }
-            else
-                showError("Error in search","Input in the text field is invalid");
+            else if(!citySearch.getText().isEmpty())
+                showError("Error in search","The text field input is not valid.");
         }
         catch (RuntimeException e){
             showError("Error in search", e.getMessage());
